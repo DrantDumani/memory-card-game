@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Header from "./components/header";
+import Game from "./components/game";
+import GameOver from "./components/gameOver";
+import Footer from "./components/footer";
+import "./App.css";
 
 function App() {
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const endGame = () => {
+    setIsPlaying(false);
+  };
+
+  const beginGame = () => {
+    setIsPlaying(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="content">
+      <Header />
+      {isPlaying ? (
+        <Game endGame={endGame} />
+      ) : (
+        <GameOver beginGame={beginGame} />
+      )}
+      <Footer />
     </div>
   );
 }

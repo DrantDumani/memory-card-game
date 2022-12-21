@@ -1,0 +1,36 @@
+{
+  "cardData": [
+    {
+      "name": "Metal Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/2/26/MM2MetalMan.jpg"
+    },
+    {
+      "name": "Air Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/d/d0/MM2AirMan.jpg"
+    },
+    {
+      "name": "Bubble Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/5/5a/MM2BubbleMan.jpg"
+    },
+    {
+      "name": "Quick Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/9/91/MM2QuickMan.jpg"
+    },
+    {
+      "name": "Crash Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/d/d0/MM2ClashMan.jpg"
+    },
+    {
+      "name": "Flash Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/8/8a/MM2FlashMan.jpg"
+    },
+    {
+      "name": "Heat Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/b/be/MM2HeatMan.jpg"
+    },
+    {
+      "name": "Wood Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/4/4f/MM2WoodMan.jpg"
+    }
+  ]
+}
