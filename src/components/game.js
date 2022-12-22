@@ -33,9 +33,10 @@ function Game() {
     const indices = arr.map((_, i) => i);
     const subArr = [];
     for (let i = 0; i < length; i++) {
-      const ind = Math.floor(Math.random() * indices.length);
-      subArr.push(arr[indices[ind]]);
+      const ind = indices[Math.floor(Math.random() * indices.length)];
+      subArr.push(arr[ind]);
       indices.splice(indices.indexOf(ind), 1);
+      console.log(ind, indices);
     }
     return subArr;
   };
