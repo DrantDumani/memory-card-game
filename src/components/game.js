@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Scoreboard from "./scoreBoard";
 import cardInfo from "../database.json";
 import uniqid from "uniqid";
+import "../styleSheets/game.scss";
 
 // the cards object just holds the link to the picture and the name of the character.
 // when choosing cards, they're mapped the objects that contain a click property and an id
