@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Scoreboard from "./scoreBoard";
 import cardInfo from "../database.json";
+import Card from "./card";
 import uniqid from "uniqid";
 import "../styleSheets/game.scss";
 
@@ -8,7 +9,7 @@ import "../styleSheets/game.scss";
 // when choosing cards, they're mapped the objects that contain a click property and an id
 // a function would need to randomly select the cards.
 
-function Game() {
+function Game({ endGame }) {
   const [score, setScore] = useState(0);
   const [hiScore, setHiScore] = useState(0);
   const [cards, setCards] = useState([]);
@@ -36,7 +37,6 @@ function Game() {
       const ind = indices[Math.floor(Math.random() * indices.length)];
       subArr.push(arr[ind]);
       indices.splice(indices.indexOf(ind), 1);
-      console.log(ind, indices);
     }
     return subArr;
   };
@@ -61,17 +61,31 @@ function Game() {
     setCards(shuffled);
   };
 
+  const updateCardStatus = (card) => {
+    const updatedCards = [...cards];
+    for (let el of updatedCards) {
+      if (el === card) {
+        el.clicked = true;
+      }
+    }
+    setCards(updatedCards);
+  };
+
   //fix this later
   const handleCardClick = (e) => {
-    // const { id } = e.target; //gets id of card element which is used to look up card object
-    //if you don't want to loop, store index on card obj and use that to look up array element
-    const { index } = undefined; //figure this out later
-    const card = cards[index];
-    if (card.clicked) {
-      //if the card has been clicked already, then end the game
-      //   gameOver();
+    const { id } = e.currentTarget;
+    let clickable = null;
+    for (let card of cards) {
+      if (card.id === id) {
+        clickable = card;
+        break;
+      }
+    }
+
+    if (clickable.clicked) {
+      endGame();
     } else {
-      card.clicked = true;
+      updateCardStatus(clickable);
       shuffleCards();
       updateScore();
     }
@@ -84,10 +98,12 @@ function Game() {
       <ul id="card-list">
         {cards.map((card) => (
           <li key={card.id}>
-            <div>
-              <p>{card.name}</p>
-              <img src={card.imgLink} alt="character" />
-            </div>
+            <Card
+              id={card.id}
+              imgLink={card.imgLink}
+              name={card.name}
+              handleClick={handleCardClick}
+            />
           </li>
         ))}
       </ul>
