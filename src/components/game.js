@@ -9,26 +9,10 @@ import "../styleSheets/game.scss";
 // when choosing cards, they're mapped the objects that contain a click property and an id
 // a function would need to randomly select the cards.
 
-function Game({ endGame }) {
-  const [score, setScore] = useState(0);
-  const [hiScore, setHiScore] = useState(0);
+function Game({ score, endGame, hiScore, updateScore, resetScore }) {
   const [cards, setCards] = useState([]);
   const [level, setLevel] = useState(1);
   const database = cardInfo.cardData;
-
-  const updateHiScore = () => {
-    if (score > hiScore) {
-      setHiScore(score);
-    }
-  };
-
-  const updateScore = () => {
-    setScore((score) => score + 1);
-  };
-
-  const resetScore = () => {
-    setScore(0);
-  };
 
   const randomSubArray = (arr, length) => {
     const indices = arr.map((_, i) => i);
@@ -71,7 +55,12 @@ function Game({ endGame }) {
     setCards(updatedCards);
   };
 
-  //fix this later
+  const checkLevelComplete = () => {
+    if (cards.every((card) => card.clicked)) {
+      setLevel(level + 1);
+    }
+  };
+
   const handleCardClick = (e) => {
     const { id } = e.currentTarget;
     let clickable = null;
@@ -88,6 +77,7 @@ function Game({ endGame }) {
       updateCardStatus(clickable);
       shuffleCards();
       updateScore();
+      checkLevelComplete();
     }
   };
 

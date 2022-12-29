@@ -2,35 +2,99 @@
   "cardData": [
     {
       "name": "Metal Man",
-      "imgLink": "https://static.wikia.nocookie.net/megaman/images/2/26/MM2MetalMan.jpg"
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/7/7c/Metalman.png"
     },
     {
       "name": "Air Man",
-      "imgLink": "https://static.wikia.nocookie.net/megaman/images/d/d0/MM2AirMan.jpg"
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/4/4a/Airman.png"
     },
     {
       "name": "Bubble Man",
-      "imgLink": "https://static.wikia.nocookie.net/megaman/images/5/5a/MM2BubbleMan.jpg"
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/d/d7/Bubbleman.png"
     },
     {
       "name": "Quick Man",
-      "imgLink": "https://static.wikia.nocookie.net/megaman/images/9/91/MM2QuickMan.jpg"
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/f/f3/Quickman.png"
     },
     {
       "name": "Crash Man",
-      "imgLink": "https://static.wikia.nocookie.net/megaman/images/d/d0/MM2ClashMan.jpg"
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/5/58/Crashman.png"
     },
     {
       "name": "Flash Man",
-      "imgLink": "https://static.wikia.nocookie.net/megaman/images/8/8a/MM2FlashMan.jpg"
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/9/9d/Flashman.png"
     },
     {
       "name": "Heat Man",
-      "imgLink": "https://static.wikia.nocookie.net/megaman/images/b/be/MM2HeatMan.jpg"
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/a/ad/Heatman.png"
     },
     {
       "name": "Wood Man",
-      "imgLink": "https://static.wikia.nocookie.net/megaman/images/4/4f/MM2WoodMan.jpg"
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/7/72/Woodman.png"
+    },
+    {
+      "name": "Needle Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/c/cf/Needleman.png"
+    },
+    {
+      "name": "Magnet Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/7/7e/Magnetman.png"
+    },
+    {
+      "name": "Gemini Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/6/65/Geminiman.png"
+    },
+    {
+      "name": "Hard Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/5/5e/Hardman.png"
+    },
+    {
+      "name": "Top Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/d/d3/Topman.png"
+    },
+    {
+      "name": "Snake Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/a/ab/Snakeman.png"
+    },
+    {
+      "name": "Spark Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/8/8e/Sparkman.png"
+    },
+    {
+      "name": "Shadow Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/c/c1/Shadowman.png"
+    },
+    {
+      "name": "Bright Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/9/9b/Brightman.png"
+    },
+    {
+      "name": "Toad Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/b/bf/Toadman.png"
+    },
+    {
+      "name": "Drill Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/1/1d/Drillman.png"
+    },
+    {
+      "name": "Pharoah Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/6/6c/Pharaohman.png"
+    },
+    {
+      "name": "Ring Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/8/84/Ringman.png"
+    },
+    {
+      "name": "Dust Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/7/7c/Dustman.png"
+    },
+    {
+      "name": "Dive Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/d/db/RCW_Dive_Man.png"
+    },
+    {
+      "name": "Skull Man",
+      "imgLink": "https://static.wikia.nocookie.net/megaman/images/4/47/Skullman.png"
     }
   ]
 }
