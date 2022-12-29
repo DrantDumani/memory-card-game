@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Scoreboard from "./scoreBoard";
 import cardInfo from "../database.json";
 import Card from "./card";
 import uniqid from "uniqid";
@@ -9,7 +8,7 @@ import "../styleSheets/game.scss";
 // when choosing cards, they're mapped the objects that contain a click property and an id
 // a function would need to randomly select the cards.
 
-function Game({ score, endGame, hiScore, updateScore, resetScore }) {
+function Game({ endGame, updateScore, resetScore }) {
   const [cards, setCards] = useState([]);
   const [level, setLevel] = useState(1);
   const database = cardInfo.cardData;
@@ -72,18 +71,19 @@ function Game({ score, endGame, hiScore, updateScore, resetScore }) {
     }
 
     if (clickable.clicked) {
+      resetScore();
       endGame();
     } else {
       updateCardStatus(clickable);
       shuffleCards();
       updateScore();
+      // updateHiScore();
       checkLevelComplete();
     }
   };
 
   return (
     <main>
-      <Scoreboard score={score} hiScore={hiScore} />
       <div className="rules-container">The rules to the game go here!</div>
       <ul id="card-list">
         {cards.map((card) => (
