@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Header from "./components/header";
+import ScoreBoard from "./components/scoreBoard";
 import Game from "./components/game";
 import GameOver from "./components/gameOver";
 import Footer from "./components/footer";
 import "./App.css";
+import { useEffect } from "react";
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -18,11 +20,15 @@ function App() {
     setIsPlaying(true);
   };
 
-  const updateHiScore = () => {
-    if (score > hiScore) {
-      setHiScore(score);
-    }
-  };
+  useEffect(() => {
+    const updateHiScore = () => {
+      if (score > hiScore) {
+        setHiScore((hiScore) => hiScore + 1);
+      }
+    };
+
+    updateHiScore();
+  }, [score]);
 
   const updateScore = () => {
     setScore((score) => score + 1);
@@ -35,12 +41,12 @@ function App() {
   return (
     <div id="content">
       <Header />
+      <ScoreBoard score={score} hiScore={hiScore} />
       {isPlaying ? (
         <Game
           endGame={endGame}
           score={score}
           hiScore={hiScore}
-          updateHiScore={updateHiScore}
           updateScore={updateScore}
           resetScore={resetScore}
         />
