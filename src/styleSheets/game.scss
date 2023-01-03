@@ -1,8 +1,20 @@
+.main {
+  text-align: center;
+}
+
 #card-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  list-style-type: none;
+  gap: 12px;
+  padding: 0;
 }
 
 #card-list > * {
-  border: 1px solid #000;
+  border: 2px solid #00d6ee;
+  border-radius: 8px;
+}
+
+.level-text {
+  font-size: 32px;
 }

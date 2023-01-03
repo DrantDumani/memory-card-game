@@ -4,7 +4,7 @@ import ScoreBoard from "./components/scoreBoard";
 import Game from "./components/game";
 import GameOver from "./components/gameOver";
 import Footer from "./components/footer";
-import "./App.css";
+import "./App.scss";
 import { useEffect } from "react";
 
 function App() {
@@ -41,6 +41,11 @@ function App() {
   return (
     <div id="content">
       <Header />
+      <div className="rules-container">
+        <p className="rules-text">
+          Rules: Click on a card, but don't click the same card twice.
+        </p>
+      </div>
       <ScoreBoard score={score} hiScore={hiScore} />
       {isPlaying ? (
         <Game
@@ -51,7 +56,7 @@ function App() {
           resetScore={resetScore}
         />
       ) : (
-        <GameOver beginGame={beginGame} />
+        <GameOver beginGame={beginGame} score={score} />
       )}
       <Footer />
     </div>

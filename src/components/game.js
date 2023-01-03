@@ -83,8 +83,8 @@ function Game({ endGame, updateScore, resetScore }) {
   };
 
   return (
-    <main>
-      <div className="rules-container">The rules to the game go here!</div>
+    <main className="main">
+      <p className="level-text">Level: {level}</p>
       <ul id="card-list">
         {cards.map((card) => (
           <li key={card.id}>

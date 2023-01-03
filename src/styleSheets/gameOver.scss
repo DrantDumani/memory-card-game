@@ -1,0 +1,21 @@
+.game-over {
+  text-align: center;
+  font-size: 40px;
+
+  * {
+    margin: 0;
+  }
+
+  .restart-btn {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: inherit;
+    color: inherit;
+    border: 1px solid #fff;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #0082a2;
+    }
+  }
+}

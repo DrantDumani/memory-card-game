@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Sui Generis";
+  src: url("../src/fonts/sui\ generis\ rg.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#content {
+  $pg-color: #fff;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "Sui Generis";
+  background-color: #00495b;
+  color: $pg-color;
+  padding: 28px;
+
+  .rules-container {
+    border: 1px solid $pg-color;
+    padding: 0 7px;
+    border-radius: 12px;
+  }
+}
