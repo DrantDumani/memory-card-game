@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/memory-card-game/static/css/main.6f7b6c03.css",
+    "main.js": "/memory-card-game/static/js/main.c437bcf7.js",
+    "static/media/sui generis rg.ttf": "/memory-card-game/static/media/sui generis rg.f96b05a2ba3f6d7cd2b2.ttf",
+    "index.html": "/memory-card-game/index.html",
+    "main.6f7b6c03.css.map": "/memory-card-game/static/css/main.6f7b6c03.css.map",
+    "main.c437bcf7.js.map": "/memory-card-game/static/js/main.c437bcf7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f7b6c03.css",
+    "static/js/main.c437bcf7.js"
+  ]
+}
