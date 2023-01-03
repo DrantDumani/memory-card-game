@@ -4,11 +4,7 @@ import Card from "./card";
 import uniqid from "uniqid";
 import "../styleSheets/game.scss";
 
-// the cards object just holds the link to the picture and the name of the character.
-// when choosing cards, they're mapped the objects that contain a click property and an id
-// a function would need to randomly select the cards.
-
-function Game({ endGame, updateScore, resetScore }) {
+function Game({ endGame, updateScore }) {
   const [cards, setCards] = useState([]);
   const [level, setLevel] = useState(1);
   const database = cardInfo.cardData;
@@ -71,13 +67,11 @@ function Game({ endGame, updateScore, resetScore }) {
     }
 
     if (clickable.clicked) {
-      resetScore();
       endGame();
     } else {
       updateCardStatus(clickable);
       shuffleCards();
       updateScore();
-      // updateHiScore();
       checkLevelComplete();
     }
   };
