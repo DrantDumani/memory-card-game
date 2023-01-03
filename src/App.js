@@ -18,6 +18,7 @@ function App() {
 
   const beginGame = () => {
     setIsPlaying(true);
+    resetScore();
   };
 
   useEffect(() => {
@@ -53,7 +54,6 @@ function App() {
           score={score}
           hiScore={hiScore}
           updateScore={updateScore}
-          resetScore={resetScore}
         />
       ) : (
         <GameOver beginGame={beginGame} score={score} />
